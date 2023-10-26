@@ -1,11 +1,17 @@
-<h1>To Do List</h1>
+<main>
 
-<p>Enter the first task
-<input type="text" #taskInput>
-<button (click)="taskCompleted()">Completed</button>
-</p>
+    <h1>To Do List</h1>
 
-<div *ngFor="let item of emptyArray">
-    <p> {{item}}</p>
-</div>
+    <p> Enter the task:</p>
+    <div>
+        <input type="text" #taskInput>
+        <button (click)="taskCompleted()">Completed</button>
+    </div>
+
+    <div *ngFor="let item of emptyArray">
+        <p> {{item}}</p>
+    </div>
+
+</main>
+
 

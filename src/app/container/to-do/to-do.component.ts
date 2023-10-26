@@ -24,8 +24,17 @@ export class ToDoComponent {
   taskCompleted() {
     this.taskTask1 = this.taskInput?.nativeElement.value;
     this.emptyArray.push(this.taskTask1)
-    console.log(this.emptyArray);
-    
 
+    let values: any[];
+
+    this.emptyArray.forEach((item, index) =>{
+      localStorage.setItem(index.toString(), item)
+      values.push(localStorage.getItem(item))
+    })
+
+    
+    
+    
+  
   }
 }
