@@ -6,6 +6,7 @@ import { ContainerComponent } from './container/container.component';
 import { ToDoComponent } from './container/to-do/to-do.component';
 import { CompletedComponent } from './container/completed/completed.component';
 import { PriorityBreakdownComponent } from './container/priority-breakdown/priority-breakdown.component';
+import { ColorPickerComponent } from './container/color-picker/color-picker.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { PriorityBreakdownComponent } from './container/priority-breakdown/prior
     ToDoComponent,
     CompletedComponent,
     PriorityBreakdownComponent,
+    ColorPickerComponent,
   ],
   imports: [
     BrowserModule

@@ -1,16 +1,46 @@
 <main>
-
     <h1>To Do List</h1>
-
     <p> Enter the task:</p>
+
     <div>
         <input type="text" #taskInput>
-        <button (click)="taskCompleted()">Completed</button>
+        <!-- <button (click)="addToArray()">Completed</button> -->
+        <br>
+        <button (click)="saveInputsIntoLocalStorage()">Click to save the list and local</button>
+        <br>
+        <button (click)="loadInputs()">load Items</button>
     </div>
+    
 
-    <div *ngFor="let item of emptyArray">
+    
+    <ng-container *ngFor="let item of userMapInputs | keyvalue">
+        <!-- Add another ng container for removing individual items -->
+        {{item.key}} <br>
+    </ng-container>
+    
+
+    <!-- <li>
+        {{userBackgroundColor}}
+        {{userBackgroundColor2}}
+        {{userBackgroundColor3}}
+    </li> -->
+
+
+
+    <!-- <li [value]="item">{{item}}</li>
+    <li [value]="item2">{{item2}}</li> -->
+
+    <!-- <div *ngFor="let item of emptyArray">
         <p> {{item}}</p>
-    </div>
+    </div> -->
+
+    <button (click)="deleteInputs()">Delete storeUserInputs</button>
+
+    <br>
+    <button (click)="clearAll()">Clear All Items From localS</button>
+
+    <br>
+    
 
 </main>
 
