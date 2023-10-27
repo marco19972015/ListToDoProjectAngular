@@ -16,8 +16,7 @@ export class ToDoComponent {
   @ViewChild('taskInput') taskInput: ElementRef | undefined
   // Store user inputs 
   storeUserInputs: Array<string> = [];
-  // Create the map 
-  userMapInputs: Map<any, any> = new Map()
+
 
   ngOnInit(): void {
     // we call the method here and return the current instance
@@ -48,33 +47,25 @@ export class ToDoComponent {
   // WE PROB HAVE TO ADD A CONDITIONAL STATEMENT
   // if index already exists then place the new item
   loadInputs() {
+    // Need an if statement that controls if exists
+
       Object.keys(localStorage).forEach((key) =>{
-        console.log(localStorage.getItem(key));
+        // console.log(localStorage.getItem(key));
         let itemIndex = JSON.stringify(localStorage.getItem(key))
         let stringIndex = JSON.parse(itemIndex)
         // remove the quotations that come in from turning it into a string
         stringIndex = stringIndex.slice(1, -1)
         this.storeUserInputs.push(stringIndex)
     });
-
-    this.storeUserInputs.forEach((value, index) => {
-      this.userMapInputs.set(value, index)
-      console.log(this.userMapInputs);
-    })
-
-  
+    this.sort() 
   }
 
-  sortItems() {
-    
+  sort() {
+    this.storeUserInputs.sort();
   }
-
-
-
 
   clearAll(){
     localStorage.clear();
-    
   }
 
   deleteInputs() {

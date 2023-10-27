@@ -13,9 +13,9 @@
     
 
     
-    <ng-container *ngFor="let item of userMapInputs | keyvalue">
+    <ng-container *ngFor="let item of storeUserInputs | keyvalue ">
         <!-- Add another ng container for removing individual items -->
-        {{item.key}} <br>
+        {{item.value}}: {{item.key}}  <br>
     </ng-container>
     
 

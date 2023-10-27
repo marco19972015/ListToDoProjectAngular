@@ -8,6 +8,7 @@ import { CompletedComponent } from './container/completed/completed.component';
 import { PriorityBreakdownComponent } from './container/priority-breakdown/priority-breakdown.component';
 import { ColorPickerComponent } from './container/color-picker/color-picker.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { ColorPickerComponent } from './container/color-picker/color-picker.comp
     CompletedComponent,
     PriorityBreakdownComponent,
     ColorPickerComponent,
+    
   ],
   imports: [
     BrowserModule
